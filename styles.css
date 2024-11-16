@@ -1,0 +1,1004 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Background */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #3b3b5c);
+  color: white;
+  overflow-x: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  z-index: 10;
+  transition: background 0.3s ease-in-out;
+}
+
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #8b7cff;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #8b7cff;
+}
+
+header nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #8b7cff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+header nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Scroll Animations */
+.section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.section.visible {
+  opacity: 1;
+}
+
+#about {
+  background: #1e1e2f;
+}
+
+#skills {
+  background: #3b3b5c;
+}
+
+/* Cursor Effects */
+body {
+  cursor: url('https://example.com/your-custom-cursor.png'), auto;
+}
+
+/* Hover effect for sections */
+.section:hover {
+  background-color: #2b2b3b;
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+/* About Section Styling */
+#about {
+  background: #1e1e2f;
+  padding: 150px 20px;
+  color: white;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-image {
+  flex: 1;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  /* Icons are stacked below the profile image */
+  align-items: center;
+  /* Align the image towards the top */
+  padding-top: 20px;
+  /* Adjusts the vertical position of the image */
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 350px;
+  /* Increase size as needed */
+  border-radius: 50%;
+  /* Makes the image round */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  margin-bottom: 20px;
+  /* Spacing between image and icons */
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  /* Circular icons */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Slight shadow for depth */
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Enhanced hover shadow */
+}
+
+/* Resume Button Styling */
+.resume-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  /* Adjust the gap between the icons and button */
+}
+
+.resume-button {
+  background: #8b7cff;
+  /* Button background color */
+  color: white;
+  /* Text color */
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-button:hover {
+  background: #6f62d7;
+  /* Hover background color */
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  /* Enhance shadow on hover */
+}
+
+
+.about-details {
+  flex: 2;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.greeting {
+  color: #8b7cff;
+  /* Use the color you applied previously */
+}
+
+.white-name {
+  color: white;
+  /* Keeps "Tarunjit" in white */
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.animated-text-container {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.fixed-text {
+  color: white;
+  margin-right: 5px;
+  /* Adds space between fixed and animated text */
+}
+
+
+.animated-text {
+  color: #8b7cff;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #8b7cff;
+  padding-right: 5px;
+  margin-left: 5px;
+  /* Adds space between fixed and animated text */
+}
+
+
+.details {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+  /* Slightly lighter color for details */
+  text-align: justify;
+  /* Makes the text alignment look cleaner */
+  margin-bottom: 20px;
+}
+
+/* Style for the additional image */
+.additional-image {
+  text-align: center;
+  /* Center the image within the container */
+  margin-top: 20px;
+  /* Space above the image */
+}
+
+.about-additional-img {
+  width: 80%;
+  max-width: 400px;
+  /* Adjust the max width as needed */
+  border-radius: 8px;
+  /* Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Subtle shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-additional-img:hover {
+  transform: scale(1.05);
+  /* Slightly enlarges image on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  /* Adds a deeper shadow on hover */
+}
+
+/* Skills Section Styling */
+#skills {
+  background: #1e1e2f;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #8b7cff;
+}
+
+/* Skill Cards */
+.skills-category {
+  margin-bottom: 50px;
+}
+
+.skills-category h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #8b7cff;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skill {
+  background: #2e2e3e;
+  border-radius: 10px;
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.skill:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.skill:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.skill:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.skill-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.skill:hover .skill-logo {
+  transform: scale(1.2);
+}
+
+.skill-name {
+  font-size: 1rem;
+  color: #d0d0d0;
+  font-weight: 600;
+}
+
+/* Scroll Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Trigger Scroll Animation */
+.skill {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.skill.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Projects Section Styling */
+#projects {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: slideInFromLeft 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Project Cards Container */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual Project Card */
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transform: scale(0.9);
+  opacity: 0;
+  animation: fadeInScale 1s ease-in-out forwards;
+}
+
+.project-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
+}
+
+.project-card .status {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #00e6ff;
+}
+
+/* Hover Effects */
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-card:hover h3 {
+  color: #00ff7f;
+}
+
+.project-card:hover p {
+  color: #ffffff;
+}
+
+/* Animations */
+.project-card:nth-child(odd) {
+  animation-delay: 0.3s;
+}
+
+.project-card:nth-child(even) {
+  animation-delay: 0.6s;
+}
+
+/* Keyframes */
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* On Scroll Trigger */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.animate.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+  }
+}
+
+/* Experience Section Styling */
+.experience-section {
+  padding: 4rem 2rem;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  animation: slideInFromLeft 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Experience Container */
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual Experience Item */
+.experience-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Header for Each Item */
+.experience-item h3 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* List Styling */
+.experience-item ul {
+  padding-left: 20px;
+}
+
+.experience-item li {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
+/* Hover Effects */
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.experience-item:hover h3 {
+  color: #00ff7f;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Scroll Trigger Animation */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.animate.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .experience-item {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+  }
+}
+
+/* Education Section Styling */
+.education-section {
+  padding: 4rem 2rem;
+  background-color: #282c34;
+  color: white;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  animation: slideInFromLeft 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Timeline Container */
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Horizontal Line */
+.timeline-line {
+  position: absolute;
+  width: 80%;
+  /* Adjust width to fit the content */
+  height: 4px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.timeline {
+  display: flex;
+  justify-content: space-evenly;
+  /* Ensure even space between circles */
+  align-items: center;
+  width: 100%;
+  padding: 3rem 2rem;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #ff6347;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: -90px;
+  /* Adjust to position above the circle */
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(145deg, rgba(46, 49, 58, 0.9), rgba(65, 72, 86, 0.9));
+  color: #f1f1f1;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 270px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.tooltip h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #ff6347;
+}
+
+.tooltip p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+  color: #ddd;
+}
+
+/* Tooltip display on hover */
+.timeline-item:hover .circle {
+  background-color: #3498db;
+  transform: scale(1.3);
+}
+
+.timeline-item:hover .tooltip {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations for elements */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect for the timeline circles */
+.timeline-item:hover .circle {
+  background-color: #3498db;
+  transform: scale(1.3);
+}
+
+.animate {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Added Spacing between Circles */
+.timeline-item {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Adjusting the overall distance between circles */
+.timeline-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+/* Contact Us Section Styling */
+.contact-us {
+  background-color: #f1f1f1;
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-us .section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #333;
+  animation: fadeInUp 1s ease-out;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: slideInUp 1s ease-out;
+}
+
+/* Form Styling */
+.contact-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Input Focus Effects */
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.6);
+}
+
+/* Hover effects for input fields */
+.input-group input:hover,
+.input-group textarea:hover {
+  border-color: #2980b9;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  /* Increased gap for better spacing */
+}
+
+.footer .social-icon {
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  /* Align text and icon */
+}
+
+.footer .social-icon i {
+  margin-right: 0.5rem;
+  /* Space between icon and text */
+}
+
+.footer .social-icon:hover {
+  background-color: #3498db;
+  color: #fff;
+  transform: scale(1.1);
+  /* Slightly enlarges the icon and text */
+}
+
+/* Animation for Footer */
+@keyframes fadeInFooter {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.footer {
+  animation: fadeInFooter 1s ease-out;
+}
+/* Custom Cursor Styling */
+#custom-cursor {
+  width: 20px; /* Cursor size */
+  height: 20px;
+  border: 2px solid #8b7cff; /* Outline color of the cursor */
+  border-radius: 50%; /* Makes it circular */
+  position: fixed; /* Fixes it to the viewport */
+  pointer-events: none; /* Ensures it doesn't block clicks */
+  transition: transform 0.1s ease, opacity 0.2s ease;
+  transform: translate(-50%, -50%) scale(1); /* Centers and sets initial size */
+  z-index: 9999; /* Places it above all content */
+  mix-blend-mode: difference; /* Blends color for better contrast */
+}
+
+#custom-cursor.click {
+  transform: translate(-50%, -50%) scale(0.8); /* Shrinks when clicked */
+}
+
+#custom-cursor.hover {
+  transform: translate(-50%, -50%) scale(1.5); /* Enlarges when hovering over links */
+  background: rgba(139, 124, 255, 0.2); /* Adds a subtle background highlight */
+}
